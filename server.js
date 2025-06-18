@@ -16,7 +16,7 @@ const io = new Server(server, {
 
 // ⚠️ Configurá el puerto COM y baudrate según tu caso
 const port = new SerialPort({
-  path: 'COM3',       // <-- Cambiá esto si tu puerto es diferente
+  path: 'COM5',       // <-- Cambiá esto si tu puerto es diferente
   baudRate: 9600,     // <-- Asegurate que coincida con el del PIC
   autoOpen: true     // Abrimos manualmente para manejar errores
 });
@@ -28,7 +28,7 @@ port.open((err) => {
   if (err) {
     return console.error('Error al abrir el puerto:', err.message);
   }
-  console.log('Puerto serie abierto en COM3');
+  console.log('Puerto serie abierto en COM5');
 });
 
 // Cuando recibimos una línea de texto
